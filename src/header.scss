@@ -13,14 +13,20 @@
     left: 0;
     overflow-x: hidden;
     padding-top: 60px;
-    width: 17%;
+    width: 300px;
+
 }
 
 .header__title {
-    @include fontbold;
+    @include fontlogo;
     padding-left: 8%;
     color: $text-color;
     margin-bottom: 20%;
+    text-transform: uppercase;
+
+    span {
+        color: orange;
+    }
 }
 
 .header__nav {
@@ -32,7 +38,7 @@
 
 .header__menu__item {
     padding-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
 }
 
 .header__menu__text {
