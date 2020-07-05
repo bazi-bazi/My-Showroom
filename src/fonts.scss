@@ -1,0 +1,40 @@
+// Courier Std Bold
+
+// font-family: courier-std, monospace;
+
+// font-weight: 700;
+
+// font-style: normal;
+
+
+// Courier Std Bold Oblique
+
+// font-family: courier-std, monospace;
+
+// font-weight: 700;
+
+// font-style: italic;
+
+
+// Courier Std Medium
+
+// font-family: courier-std, monospace;
+
+// font-weight: 400;
+
+// font-style: normal;
+
+
+// Courier Std Medium Oblique
+
+// font-family: courier-std, monospace;
+
+// font-weight: 400;
+
+// font-style: italic;
+
+@mixin fontbold {
+    font-family: courier-std, monospace;
+    font-weight: 700;
+    font-style: normal;
+}

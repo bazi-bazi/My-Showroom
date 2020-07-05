@@ -1,0 +1,94 @@
+@import "fonts";
+@import "main";
+@import "styles";
+
+
+/// Header
+.header {
+    height: 100%;
+    background-color: $sidebar-color;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    width: 17%;
+}
+
+.header__title {
+    @include fontbold;
+    padding-left: 8%;
+    color: $text-color;
+    margin-bottom: 20%;
+}
+
+.header__nav {
+    @include fontbold;
+    padding-left: 8%;
+
+
+}
+
+.header__menu__item {
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.header__menu__text {
+    @include fontbold;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: $text-color;
+}
+
+hr {
+    margin-top: 6%;
+
+}
+
+
+.header__menu__item a {
+
+    padding-right: 30%;
+}
+
+/// header animations
+.arrow {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: orange;
+    transition: 1s ease all;
+    line-height: 40px;
+    padding: 0 24px;
+    margin-top: 5px;
+}
+
+.arrow a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $sidebar-color;
+    cursor: pointer;
+}
+
+.arrow:hover:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid orange;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.arrow:hover {
+    width: 250px;
+}
+
+.arrow:hover a {
+    color: $sidebar-color;
+    font-size: 120%;
+}

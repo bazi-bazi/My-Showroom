@@ -1,11 +1,9 @@
-$primary-color: white;
-$bg: black;
+@import "fonts";
+@import "main";
 
-h1 {
-  color: $primary-color;
-  background-color: $bg;
-}
+$sidebar-color: #333333;
+$text-color: #EEEEEE;
 
-body {
-  background-color: red;
+main {
+  background-color: $text-color;
 }
