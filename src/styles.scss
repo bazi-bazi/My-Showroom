@@ -1,11 +1,13 @@
 @import "fonts";
 @import "main";
 
+
 $sidebar-color: #333333;
 $text-color: #EEEEEE;
+$main-color: #2B2B2B;
 
 main {
-  background-color: $text-color;
-  padding-left: 350px;
+  background-color: $main-color;
+  padding-left: 30%;
   padding-top: 3%;
 }
