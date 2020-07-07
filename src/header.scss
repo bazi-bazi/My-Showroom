@@ -8,12 +8,11 @@
     height: 100%;
     background-color: $sidebar-color;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
     padding-top: 60px;
-    width: 18%;
+    width: 360px;
     height: 100vh;
 
 }
@@ -31,6 +30,7 @@
     padding-bottom: 20px;
     font-size: 1.125rem;
     cursor: pointer;
+
 }
 
 .header__menu__text {
@@ -38,11 +38,6 @@
     text-transform: capitalize;
     font-size: 1rem;
     color: $text-color;
-}
-
-hr {
-    margin-top: 6%;
-
 }
 
 .header__title {
@@ -59,11 +54,6 @@ hr {
     }
 }
 
-
-.header__menu__item li {
-
-    padding-right: 30%;
-}
 
 /// header animations
 .arrow {
@@ -94,6 +84,7 @@ hr {
     border-left: 20px solid orange;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
+
 }
 
 .arrow:hover {
@@ -106,90 +97,18 @@ hr {
 }
 
 
-// .header {
-//     position: fixed;
-//     width: 25%;
-//     height: 100vh;
-//     background: $sidebar-color;
-//     padding-top: 50px;
-// }
-
-// .header__nav {
-//     position: relative;
-//     margin-left: 15%;
-//     margin-right: 15%;
-//     text-align: right;
-//     top: 40%;
-//     transform: translateY(-50%);
-//     @include fontbold;
-// }
-
-// .header__title {
-//     @include fontlogo;
-
-//     color: $text-color;
-//     margin-top: 20px;
-//     text-transform: uppercase;
-//     font-size: 2.5rem;
-
-
-//     span {
-//         color: orange;
-//     }
-// }
-
-
-// .header__nav {
-//     ul {
-//         list-style: none;
-
-//         li {
-//             position: relative;
-//             margin: 3.2em 0;
-
-
-//             line-height: 5em;
-//             text-transform: capitalize;
-//             text-decoration: none;
-//             letter-spacing: 0.4em;
-//             color: rgba(#FFF, 0.65);
-//             display: block;
-//             transition: all ease-out 300ms;
-//             @include fontbold;
-//             cursor: pointer;
-//             font-size: 1.125rem;
-
-
-//             &.active i {
-//                 color: white;
-//             }
-
-//             &:not(.active)::after {
-//                 opacity: 0.2;
-//             }
-
-//             &:not(.active):hover i {
-//                 color: rgba(#FFF, 100);
-//             }
-
-//             &::after {
-//                 content: '';
-//                 position: absolute;
-//                 width: 100%;
-//                 height: 0.2em;
-//                 background: $sidebar-color;
-//                 left: 0;
-//                 bottom: 0;
-//                 background-color: orange;
-//             }
-//         }
-//     }
-// }
-
 [data-tab-content] {
     display: none;
 }
 
 .act[data-tab-content] {
     display: flex;
+}
+
+//// media
+
+@media (max-width: 991.98px) {
+    .header {
+        display: none;
+    }
 }
