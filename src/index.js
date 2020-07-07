@@ -4,4 +4,4 @@ import "./fonts.scss";
 import "./main.scss";
 import "./header.scss";
 import './js/calc.js';
-console.log("hello world!");
+import './js/main.js';

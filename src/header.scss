@@ -3,119 +3,55 @@
 @import "styles";
 
 
-/// Header
-// .header {
-//     height: 100%;
-//     background-color: $sidebar-color;
-//     position: fixed;
-//     z-index: 1;
-//     top: 0;
-//     left: 0;
-//     overflow-x: hidden;
-//     padding-top: 60px;
-//     width: 300px;
-
-// }
-
-
-
-// .header__nav {
-//     @include fontbold;
-//     padding-left: 8%;
-
-
-// }
-
-// .header__menu__item {
-//     padding-bottom: 20px;
-//     font-size: 1.125rem;
-// }
-
-// .header__menu__text {
-//     @include fontbold;
-//     text-transform: capitalize;
-//     font-size: 1rem;
-//     color: $text-color;
-// }
-
-// hr {
-//     margin-top: 6%;
-
-// }
-
-
-// .header__menu__item a {
-
-//     padding-right: 30%;
-// }
-
-// /// header animations
-// .arrow {
-//     width: 200px;
-//     height: 40px;
-//     position: relative;
-//     background: orange;
-//     transition: 1s ease all;
-//     line-height: 40px;
-//     padding: 0 24px;
-//     margin-top: 5px;
-// }
-
-// .arrow a {
-//     text-transform: capitalize;
-//     text-decoration: none;
-//     color: $sidebar-color;
-//     cursor: pointer;
-// }
-
-// .arrow:hover:before {
-//     content: "";
-//     position: absolute;
-//     right: -20px;
-//     bottom: 0;
-//     width: 0;
-//     height: 0;
-//     border-left: 20px solid orange;
-//     border-top: 20px solid transparent;
-//     border-bottom: 20px solid transparent;
-// }
-
-// .arrow:hover {
-//     width: 250px;
-// }
-
-// .arrow:hover a {
-//     color: $sidebar-color;
-//     font-size: 120%;
-// }
-
-
+///Header
 .header {
+    height: 100%;
+    background-color: $sidebar-color;
     position: fixed;
-    width: 25%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    width: 18%;
     height: 100vh;
-    background: $sidebar-color;
-    padding-top: 50px;
+
 }
 
+
+
 .header__nav {
-    position: relative;
+    @include fontbold;
     margin-left: 15%;
     margin-right: 15%;
-    text-align: right;
-    top: 40%;
-    transform: translateY(-50%);
+
+}
+
+.header__menu__item {
+    padding-bottom: 20px;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.header__menu__text {
     @include fontbold;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: $text-color;
+}
+
+hr {
+    margin-top: 6%;
+
 }
 
 .header__title {
     @include fontlogo;
-
     color: $text-color;
     margin-top: 20px;
-    ;
     text-transform: uppercase;
     font-size: 2.5rem;
+    margin-bottom: 60px;
 
 
     span {
@@ -123,49 +59,137 @@
     }
 }
 
-.header__nav {
-    ul {
-        list-style: none;
 
-        li {
-            position: relative;
-            margin: 3.2em 0;
+.header__menu__item li {
 
-            a {
-                line-height: 5em;
-                text-transform: capitalize;
-                text-decoration: none;
-                letter-spacing: 0.4em;
-                color: rgba(#FFF, 0.65);
-                display: block;
-                transition: all ease-out 300ms;
-                @include fontbold;
-                cursor: pointer;
-                font-size: 1.125rem;
-            }
+    padding-right: 30%;
+}
 
-            &.active a {
-                color: white;
-            }
+/// header animations
+.arrow {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: orange;
+    transition: 1s ease all;
+    line-height: 40px;
+    padding: 0 24px;
+    margin-top: 5px;
+}
 
-            &:not(.active)::after {
-                opacity: 0.2;
-            }
+.arrow li {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $sidebar-color;
+    cursor: pointer;
+}
 
-            &:not(.active):hover a {
-                color: rgba(#FFF, 100);
-            }
+.arrow:hover:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid orange;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
 
-            &::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 0.2em;
-                background: $sidebar-color;
-                left: 0;
-                bottom: 0;
-                background-color: orange;
-            }
-        }
-    }
+.arrow:hover {
+    width: 250px;
+}
+
+.arrow:hover li {
+    color: $sidebar-color;
+    font-size: 120%;
+}
+
+
+// .header {
+//     position: fixed;
+//     width: 25%;
+//     height: 100vh;
+//     background: $sidebar-color;
+//     padding-top: 50px;
+// }
+
+// .header__nav {
+//     position: relative;
+//     margin-left: 15%;
+//     margin-right: 15%;
+//     text-align: right;
+//     top: 40%;
+//     transform: translateY(-50%);
+//     @include fontbold;
+// }
+
+// .header__title {
+//     @include fontlogo;
+
+//     color: $text-color;
+//     margin-top: 20px;
+//     text-transform: uppercase;
+//     font-size: 2.5rem;
+
+
+//     span {
+//         color: orange;
+//     }
+// }
+
+
+// .header__nav {
+//     ul {
+//         list-style: none;
+
+//         li {
+//             position: relative;
+//             margin: 3.2em 0;
+
+
+//             line-height: 5em;
+//             text-transform: capitalize;
+//             text-decoration: none;
+//             letter-spacing: 0.4em;
+//             color: rgba(#FFF, 0.65);
+//             display: block;
+//             transition: all ease-out 300ms;
+//             @include fontbold;
+//             cursor: pointer;
+//             font-size: 1.125rem;
+
+
+//             &.active i {
+//                 color: white;
+//             }
+
+//             &:not(.active)::after {
+//                 opacity: 0.2;
+//             }
+
+//             &:not(.active):hover i {
+//                 color: rgba(#FFF, 100);
+//             }
+
+//             &::after {
+//                 content: '';
+//                 position: absolute;
+//                 width: 100%;
+//                 height: 0.2em;
+//                 background: $sidebar-color;
+//                 left: 0;
+//                 bottom: 0;
+//                 background-color: orange;
+//             }
+//         }
+//     }
+// }
+
+[data-tab-content] {
+    display: none;
+}
+
+.act[data-tab-content] {
+    display: flex;
 }
