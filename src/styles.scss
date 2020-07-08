@@ -7,22 +7,28 @@ $text-color: #EEEEEE;
 $main-color: #2B2B2B;
 
 .main {
+  position: relative;
   background-color: $main-color;
-  padding-left: 200px;
+  padding-left: 0px;
   padding-top: 10px;
+
 }
 
 .main__data {
-  padding-top: 22px;
-  margin-left: 230px;
+  position: relative;
+  padding-top: 100px;
+  margin-left: 450px;
+
 }
-
-
 
 .nav-icon {
   padding-top: 10px;
   margin: 1em;
   width: 40px;
+  position: absolute;
+  left: 295px;
+  top: 10px;
+
 }
 
 .nav-icon:after,
@@ -31,40 +37,43 @@ $main-color: #2B2B2B;
   background-color: #fff;
   border-radius: 3px;
   content: '';
-  display: none;
   height: 5px;
   margin: 7px 0;
   transition: all .2s ease-in-out;
   cursor: pointer;
+  display: block;
 }
 
 .nav-icon:hover:before {
   transform: translateY(12px) rotate(135deg);
+
 }
 
 .nav-icon:hover:after {
   transform: translateY(-12px) rotate(-135deg);
+
 }
 
 .nav-icon:hover div {
   transform: scale(0);
+
 }
+
 
 
 @media (max-width: 991.98px) {
 
-  .main {
-    padding-left: 10%;
-  }
+
 
   .main__data {
-    margin-left: 100px;
+    margin: auto;
+    width: 50%;
   }
 
-  .nav-icon:after,
-  .nav-icon:before,
-  .nav-icon div {
-    display: block;
-  }
+  // .nav-icon:after,
+  // .nav-icon:before,
+  // .nav-icon div {
+  //   display: block;
+  // }
 
 }
