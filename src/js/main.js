@@ -19,15 +19,17 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let header = document.querySelector('.header');
     let hamburger = document.querySelector('.nav-icon');
-    let mainTitle = document.querySelector('.main__title');
+    let mainData = document.querySelector('.main__data');
 
     let toggleStatus = 1;
     hamburger.addEventListener('click', () => {
         if (toggleStatus == 1) {
             header.style.left = '-300px';
+            mainData.style.paddingLeft = '120px';
             toggleStatus = 0;
         } else if (toggleStatus == 0) {
             header.style.left = '0';
+            mainData.style.paddingLeft = '430px';
             toggleStatus = 1;
         }
     })
