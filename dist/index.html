@@ -38,29 +38,21 @@
                         <p class="calc__text">calculator was created using vanila javascript</p>
                         <div class="budget__content">
                             <div class="budget__info">
-                                <label class="container" id="annual">Annual
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-
-                                <label class="container" id="monthly">Monthly
-                                    <input type="checkbox">
+                                <label class="container">include taxes
+                                    <input type="checkbox" id="taxes" checked="">
                                     <span class="checkmark"></span>
                                 </label>
                                 <p>Income</p>
                                 <form class="budget__form">
-                                    <label for="fname">Type your income</label>
-                                    <input type="text" id="fname" name="fname">
+                                    <label for="income">Type your income</label>
+                                    <input type="text" id="income" name="income">
                                 </form>
                                 <p>outcome</p>
                                 <form class="budget__form">
-                                    <label for="fname">Type your Expenses</label>
-                                    <input type="text" id="fname" name="fname">
+                                    <label for="outcome">Type your Expenses</label>
+                                    <input type="text" id="outcome" name="outcome">
                                 </form>
-                                <label class="container" id="taxes">include taxes
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
+
                             </div>
                             <div class="budget__result">
                                 <div class="budget__amount">
@@ -68,7 +60,7 @@
                                     <span id="total">20456</span>
                                 </div>
                                 <div class="budget__amount">
-                                    <p>Budget result with taxes</p>
+                                    <p>Budget result with taxes (20%)</p>
                                     <span id="totaltax">20456</span>
                                 </div>
                             </div>
