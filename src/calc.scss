@@ -18,7 +18,7 @@
 
 .calc__text {
     @include fontbold;
-    text-transform: capitalize;
+    text-transform: initial;
     font-size: 1.25rem;
     font-weight: 200;
     color: $text-color;
@@ -27,6 +27,7 @@
 .budget__content {
     margin-top: 45px;
     display: flex;
+    flex-wrap: wrap;
 
 }
 
@@ -34,6 +35,7 @@
     margin-right: 160px;
 
 }
+
 
 .budget__info p {
     @include fontbold;
@@ -44,9 +46,17 @@
 
 }
 
+.calc__budget {
+    margin-bottom: 70px;
 
+}
 
-///radio buttons
+.budget__result {
+    margin-bottom: 30px;
+
+}
+
+///checkbox
 
 .container {
     display: inline-block;
@@ -119,7 +129,8 @@
 
 ///input
 
-input[type=text] {
+input[type=text],
+select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -141,6 +152,14 @@ input[type=text] {
 .budget__form:last-child {
     margin-bottom: 20px;
 }
+
+.fa-plane,
+.fa-piggy-bank {
+    color: $text-color;
+    font-size: 1.125rem;
+    padding-left: 30px;
+}
+
 
 //// result
 

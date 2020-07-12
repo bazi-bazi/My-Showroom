@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/hio8cdd.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
     <title>My Showroom</title>
+    <script src="https://kit.fontawesome.com/896b33c393.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,8 +36,9 @@
                 <div class="calc">
                     <h2 class="main__text">calculators</h2>
                     <div class="calc__budget">
-                        <h3 class="calc__title">Budget Tracker</h3>
-                        <p class="calc__text">calculator was created using vanila javascript</p>
+                        <h3 class="calc__title">Annual savings Tracker<span><i class="fas fa-piggy-bank"></i></span>
+                        </h3>
+                        <p class="calc__text">Calculator was created using vanila javascript</p>
                         <div class="budget__content">
                             <div class="budget__info">
                                 <label class="container">include taxes
@@ -56,21 +59,61 @@
                             </div>
                             <div class="budget__result">
                                 <div class="budget__amount">
-                                    <p>Budget result</p>
-                                    <span id="total">20456</span>
+                                    <p>Annual savings result</p>
+                                    <span id="total">456</span>
                                 </div>
                                 <div class="budget__amount">
-                                    <p>Budget result with taxes (20%)</p>
+                                    <p>Annual savings with taxes (20%)</p>
                                     <span id="totaltax">20456</span>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                </div>
+                    <div class="calc__budget">
+                        <h3 class="calc__title">Travel Cost Calculator<span><i class="fas fa-plane"></i></span></h3>
+                        <p class="calc__text">Calculator was created using vanila javascript</p>
+                        <div class="budget__content">
+                            <div class="budget__info">
+
+                                <form class="budget__form">
+                                    <label for="travelers">Amount of travelers</label>
+                                    <input type="text" id="travelerssum" name="travelers" class="form__travel">
+                                </form>
+
+                                <form class="budget__form">
+                                    <label for="duration">Amount of days</label>
+                                    <input type="text" id="dayssum" name="duration" class="form__duration">
+                                </form>
+                                <form class="budget__form">
+                                    <label for="country">choose country</label>
+                                    <select id="countries" name="country" class="form__country">
+                                        <option value="1.0">Maldives</option>
+                                        <option value="1.6">Sri-lanka</option>
+                                        <option value="1.8">Indonesia</option>
+                                        <option value="2.0">Australia</option>
+                                    </select>
+                                </form>
+
+                            </div>
+                            <div class="budget__result">
+                                <div class="budget__amount">
+                                    <p>Total prise per traveler</p>
+                                    <span id="totalper">20456</span>
+                                </div>
+                                <div class="budget__amount">
+                                    <p>Total prise</p>
+                                    <span id="totaltravel">20456</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
             </section>
             <section class="main__content fade" id="slide" data-tab-content>
-                <h2 class="main__text">Section sliders</h2>
+                <div class="calc">
+                    <h2 class="main__text">Sliders</h2>
+                </div>
             </section>
             <section class="main__content fade" id="animation" data-tab-content>
                 <h2 class="main__text">Section animations</h2>
