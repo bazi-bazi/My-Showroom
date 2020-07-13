@@ -83,8 +83,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     travelersSum.addEventListener('change', function () {
         travelersFinal = +this.value;
-        priseAll = (travelersFinal + daysFinal) * 1000;
+        priseAll = (travelersFinal * daysFinal) * 1000;
         priseAllPersons = priseAll / daysFinal;
+
 
         if (daysSum.value == '') {
             gettravel.innerHTML = 0;
@@ -102,7 +103,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     daysSum.addEventListener('change', function () {
         daysFinal = +this.value;
-        priseAll = (travelersFinal + daysFinal) * 1000;
+        priseAll = (travelersFinal * daysFinal) * 1000;
         priseAllPersons = priseAll / daysFinal;
 
         if (daysSum.value == '') {
@@ -118,7 +119,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    countries.addEventListener('change', function () {
+    countriessum.addEventListener('change', function () {
         if (travelersSum.value == '' || daysSum.value == '') {
             gettravel.innerHTML = 0;
             gettravelers.innerHTML = 0;
