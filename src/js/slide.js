@@ -11,13 +11,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
     nextSlider.addEventListener('click', () => {
         next('next');
-        console.log('clicked');
     });
 
 
     prevSlider.addEventListener('click', () => {
         next('prev')
-        console.log('clicked');
     });
 
 
@@ -43,6 +41,56 @@ window.addEventListener('DOMContentLoaded', function () {
 
     }
 
+    // slider 2
 
+    let slideIndex = 1;
+    let slideruno = document.querySelectorAll('.slideruno__item');
+    let unoPrev = document.querySelector('.slideruno-left');
+    let unoNext = document.querySelector('.slideruno-right');
+    let dotAll = document.querySelector('.slider-dots');
+    let dots = document.querySelectorAll('.dot');
+
+    showSlides(slideIndex);
+
+    function showSlides(n) {
+
+        if (n > slideruno.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slideruno.length;
+        }
+
+        slideruno.forEach((item) => item.style.display = 'none');
+        dots.forEach((item) => item.classList.remove('dot-active'));
+
+        slideruno[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].classList.add('dot-active');
+
+    }
+
+    function nextSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    unoPrev.addEventListener('click', function () {
+        nextSlide(-1);
+    });
+
+    unoNext.addEventListener('click', function () {
+        nextSlide(1);
+    });
+
+    dotAll.addEventListener('click', function (event) {
+        for (let i = 0; i < dots.length + 1; i++) {
+            if (event.target.classList.contains('dot') && event.target == dots[i - 1]) {
+                currentSlide(i);
+            }
+        }
+    });
 
 });
