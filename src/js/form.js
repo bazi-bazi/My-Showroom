@@ -11,10 +11,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let form = document.querySelector('.form__first');
     let input = document.getElementsByTagName('input');
+    let inputx = document.getElementById('formfirst');
     let statusText = document.createElement('div');
     let textarea = document.getElementsByTagName('textarea');
 
     statusText.classList.add('status');
+
+
 
 
     form.addEventListener('submit', function (event) {
@@ -22,41 +25,52 @@ window.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         form.appendChild(statusText);
 
+        if (inputx.value.length == '') {
+            statusText.innerHTML = notifications.failure;
+        } else {
 
-        let request = new XMLHttpRequest();
-        request.open('POST', 'http://localhost/local/server.php');
-        request.setRequestHeader("Content-type", "application/json; charset=utf-8");
+            let request = new XMLHttpRequest();
+            request.open('POST', 'http://localhost/local/server.php');
+            request.setRequestHeader("Content-type", "application/json; charset=utf-8");
 
-        let formData = new FormData(form);
+            let formData = new FormData(form);
 
-        let object = {};
-        formData.forEach(function (value, key) {
-            object[key] = value;
-        });
+            let object = {};
+            formData.forEach(function (value, key) {
+                object[key] = value;
+            });
 
-        let json = JSON.stringify(object);
+            let json = JSON.stringify(object);
 
 
-        request.send(json);
 
-        request.addEventListener('readystatechange', function () {
-            if (request.readyState < 4) {
-                statusText.innerHTML = notifications.loading;
-            } else if (request.readyState === 4 && request.status == 200) {
-                statusText.innerHTML = notifications.success;
-            } else {
-                statusText.innerHTML = notifications.failure;
+            request.send(json);
+
+            request.addEventListener('readystatechange', function () {
+                if (request.readyState < 4) {
+                    statusText.innerHTML = notifications.loading;
+                } else if (request.readyState === 4 && request.status == 200) {
+                    statusText.innerHTML = notifications.success;
+                } else {
+                    statusText.innerHTML = notifications.failure;
+                }
+            });
+
+            /// empty text areas
+
+            for (let i = 0; i < input.length; i++) {
+                input[i].value = '';
+
             }
-        });
 
-        for (let i = 0; i < input.length; i++) {
-            input[i].value = '';
+            for (let i = 0; i < textarea.length; i++) {
+                textarea[i].value = '';
+            }
+
 
         }
 
-        for (let i = 0; i < textarea.length; i++) {
-            textarea[i].value = '';
-        }
+
 
     });
 
