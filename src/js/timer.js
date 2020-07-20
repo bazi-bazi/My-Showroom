@@ -51,4 +51,39 @@ window.addEventListener('DOMContentLoaded', function () {
     setTime('timer', deadline);
 
 
+
+    /// Timer 2
+
+
+    const startingNumber = 1;
+
+    let timeCount = startingNumber * 60;
+
+    let countdown = document.querySelector('.countdown');
+
+    setInterval(updateCountdown, 1000);
+
+    function updateCountdown() {
+        let minutesCount = Math.floor(timeCount / 60);
+        let secondsCount = timeCount % 60;
+
+
+        countdown.innerHTML = `${minutesCount}:${secondsCount}`;
+        timeCount--;
+
+
+        if (timeCount < 0) {
+            timeCount = startingNumber * 60;
+        }
+
+    }
+
+
+
+
+
+
+
+
+
 });
