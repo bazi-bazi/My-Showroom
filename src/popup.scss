@@ -37,6 +37,7 @@
     background-color: #e2525c;
     width: 500px;
     max-width: 85%;
+    transition-duration: 100s;
 }
 
 .modal__window.active-modal {
@@ -87,4 +88,11 @@
 #overlay.active-overlay {
     opacity: 1;
     pointer-events: all;
+}
+
+.popup-fade {
+
+    animation-name: fade;
+    animation-duration: 1.0s;
+
 }

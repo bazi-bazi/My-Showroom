@@ -1,0 +1,75 @@
+@import "fonts";
+@import "main";
+@import "styles";
+
+
+.animation {
+    margin-top: 60px;
+
+}
+
+.animation__text {
+    color: $text-color;
+    font-size: 3rem;
+    text-transform: capitalize;
+    @include fontlogo;
+
+
+}
+
+/// boxes
+
+.animation__box {
+    margin-top: 60px;
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: absolute;
+}
+
+.orange {
+    background-color: orange;
+    cursor: pointer;
+
+}
+
+.orange span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $main-color;
+    font-size: 1rem;
+    @include fontlogo;
+
+}
+
+
+
+.pink {
+    background-color: pink;
+}
+
+.aqua {
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.aqua span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $main-color;
+    font-size: 1rem;
+    @include fontlogo;
+
+}
+
+.purple {
+    background-color: purple;
+}
