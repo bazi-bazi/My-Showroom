@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         });
 
-        //add 3 tweens that will play in direct succession.
+
         tl.to(".purple", {
             duration: 0.7,
             x: 120,
@@ -54,7 +54,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
         });
 
-        //add 3 tweens that will play in direct succession.
         tl.to(".purple", {
             duration: 1,
             x: 1,
@@ -78,6 +77,21 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
 
+
+    // Animated title
+
+    let tl = gsap.timeline({
+
+    });
+
+    tl.from(".title__hidden", {
+        duration: 2,
+        y: "100%",
+        ease: "power4.out",
+        repeat: -1,
+        yoyo: true
+
+    });
 
 
 });
