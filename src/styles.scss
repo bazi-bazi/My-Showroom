@@ -89,6 +89,31 @@ $main-color: #2B2B2B;
   font-size: 1.375rem;
 }
 
+.contacts {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.contacts__items a {
+  padding: 10px 5px 15px 0px;
+  color: $text-color;
+  font-size: 1.875rem;
+}
+
+.contacts__link {
+  display: block;
+  text-decoration: none;
+  color: $text-color;
+  @include fontmedium;
+  padding-bottom: 8px;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+
 @media (max-width: 991.98px) {
 
 
